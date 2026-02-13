@@ -1,0 +1,9 @@
+azure-functions
+azure-storage-blob
+colour-science
+colour-checker-detection
+opencv-python-headless
+numpy
+scipy
+imageio
+pillow
