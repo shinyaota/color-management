@@ -1258,6 +1258,11 @@ export default function App() {
             <p>基準・チャート画像も追加後「基準へ移動」で分離できます。</p>
           </div>
         </div>
+        <div className="helper">
+          <strong>ポイント</strong>
+          <div>後から設定を変えて再処理できます（元画像は保持）。</div>
+          <div>基準/チャートに使う画像も、ここで追加して「基準へ移動」で分離します。</div>
+        </div>
       </section>
 
       <section className="gallery-controls">
@@ -1370,6 +1375,12 @@ export default function App() {
             </div>
             <div>再処理: 設定を変えて何度でも可能</div>
           </div>
+        </div>
+        <div className="helper">
+          <strong>用語の意味</strong>
+          <div>ΔE: 色差（小さいほど基準に近い）</div>
+          <div>WB: ホワイトバランス（白基準）</div>
+          <div>パレット: 基準色の一覧（Pantone/DIC等）</div>
         </div>
         <div className="calibration-grid">
           <div className="calibration-card">
@@ -1611,6 +1622,11 @@ export default function App() {
               <p className="muted">CSVパレットと基準色サンプルからLab補正量を算出します。</p>
             </div>
             <p className="muted">CSV例: `name,lab_l,lab_a,lab_b` または `name,r,g,b`</p>
+            <div className="helper">
+              <strong>必要なもの</strong>
+              <div>パレットCSV（Pantone/DICはCSVで読み込み）</div>
+              <div>基準色が写っている画像（背景サンプル or 参照画像）</div>
+            </div>
             <label>
               パレットプリセット
               <select value={palettePresetId} onChange={(event) => handlePalettePresetSelect(event.target.value)}>
@@ -1779,6 +1795,12 @@ export default function App() {
         <div className="section-title">
           <h2>Step 4. 処理設定</h2>
           <span>補正アルゴリズムと出力</span>
+        </div>
+        <div className="helper">
+          <strong>処理の適合</strong>
+          <div>ColorChecker基準: チャート撮影済みの高精度案件向け</div>
+          <div>参照画像基準: チャート無し画像の近似補正向け</div>
+          <div>リカバリー: 撮影条件が整っていない画像の救済向け</div>
         </div>
         <div className="calibration-grid">
           <div className="calibration-card">
@@ -1999,6 +2021,11 @@ export default function App() {
         <div className="section-title">
           <h2>Step 5. 実行 & レポート</h2>
           <span>処理と根拠出力</span>
+        </div>
+        <div className="helper">
+          <strong>再処理について</strong>
+          <div>設定を変更して何度でも再実行できます（元画像は保持）。</div>
+          <div>レポートに「どの処理を適用したか」を保存します。</div>
         </div>
         <div className="calibration-grid">
           <div className="calibration-card">
